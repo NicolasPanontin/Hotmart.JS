@@ -336,9 +336,40 @@
 
 // console.log(firstName);
 
-// 26 - destructuring com arrays
-const myList = ["Avião", "Submarino", "Carro"]
+// // 26 - destructuring com arrays
+// const myList = ["Avião", "Submarino", "Carro"]
 
-const [veiculoA, veiculoB, veiculoC] = myList
+// const [veiculoA, veiculoB, veiculoC] = myList
 
-console.log(veiculoA, veiculoB, veiculoC);
+// console.log(veiculoA, veiculoB, veiculoC);
+
+// // 27 - JSON
+// const myJson = '{"name" : "Nicolas", "age": 18, "skills": ["PHP", "JavaScript", "Python"]}';
+
+// console.log(myJson);
+
+// console.log(typeof myJson);
+
+// // 28 - JSON para objeto e objeto para JSON
+// const myObject = JSON.parse(myJson);
+
+// console.log(myObject);
+
+// console.log(myObject.name);
+
+// console.log(typeof myObject);
+
+// // jason invalido
+// const badJson = '{"name": Nicolas, "age": 18}'
+
+// // const myBadObject = JSON.parse(badJson)
+
+// myObject.isOpenTowork = true;
+
+// console.log(myObject);
+
+// const myNewJson = JSON.stringify(myObject);
+
+// console.log(myNewJson);
+
+// console.log(typeof myNewJson);
