@@ -211,57 +211,57 @@
 
 // console.log(boeing[pilotos])
 
-// 13 - Getters e Setters
- class Post {
-    constructor(titulo, descricao, tags){
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.tags = tags;
-    }
+// // 13 - Getters e Setters
+//  class Post {
+//     constructor(titulo, descricao, tags){
+//         this.titulo = titulo;
+//         this.descricao = descricao;
+//         this.tags = tags;
+//     }
 
-    get exibirTitulo() {
-        return `Você está lendo: ${this.titulo}`;
-    }
+//     get exibirTitulo() {
+//         return `Você está lendo: ${this.titulo}`;
+//     }
 
-    set adicionarTags(tags) {
-        const tagsArrays = tags.split(", ")
-        this.tags = tagsArrays;
-    }
- }
+//     set adicionarTags(tags) {
+//         const tagsArrays = tags.split(", ")
+//         this.tags = tagsArrays;
+//     }
+//  }
 
- const myPost = new Post("Algum post", "É um post sobre programação")
+//  const myPost = new Post("Algum post", "É um post sobre programação")
 
- console.log(myPost);
+//  console.log(myPost);
 
- console.log(myPost.exibirTitulo)
+//  console.log(myPost.exibirTitulo)
 
- myPost.adicionarTags = "programação, javascript, js";
+//  myPost.adicionarTags = "programação, javascript, js";
 
- console.log(myPost)
+//  console.log(myPost)
 
-// 14 - Herança
-class Mamifero {
-    constructor(patas, nome) {
-        this.patas = patas
-    }
-}
+// // 14 - Herança
+// class Mamifero {
+//     constructor(patas, nome) {
+//         this.patas = patas
+//     }
+// }
 
-class Lobo extends Mamifero {
-    constructor(patas, nome) {
-        super(patas, patas)
-        this.nome = nome
-    }
-}
+// class Lobo extends Mamifero {
+//     constructor(patas, nome) {
+//         super(patas, patas)
+//         this.nome = nome
+//     }
+// }
 
-const shark = new Lobo(4, "Shark")
+// const shark = new Lobo(4, "Shark")
 
-console.log(shark)
+// console.log(shark)
 
-// 15 - instanceof
-console.log(shark instanceof Lobo);
+// // 15 - instanceof
+// console.log(shark instanceof Lobo);
 
-console.log(Lobo instanceof Mamifero);
+// console.log(Lobo instanceof Mamifero);
 
-console.log(new Lobo(4, "teste") instanceof Mamifero);
+// console.log(new Lobo(4, "teste") instanceof Mamifero);
 
-console.log(new Post("a", "b") instanceof Lobo)
+// console.log(new Post("a", "b") instanceof Lobo)
