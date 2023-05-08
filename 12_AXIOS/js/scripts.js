@@ -2,20 +2,29 @@
 console.log(axios);
 
 // 2 - primeiro request
-const getData = async() => {
-    try {
-        const response = await axios.get(
-            'https://jsonplaceholder.typicode.com/users'
-        );
-        console.log(response);
+const getData = async () => {
+  try {
+    const response = await postsFetch.get(
+      "https://jsonplaceholder.typicode.com/users",
+      //   4 - definindo headers
+      //   Ver request headers
+      {
+        headers: {
+          "content-type": "application/json",
+          custom: "header",
+        },
+      }
+    );
 
-      return response.data;      
-    } catch (error) {
-        console.log(error);
-    }
+    console.log(response);
+
+    return response.data;
+  } catch (error) {
+    console.log(error.response);
+  }
 };
- getData();
 
+getData();
 //  3 - imprimindo dados na tela
 const container = document.querySelector("#user-container");
 
@@ -44,3 +53,16 @@ const printData = async () => {
 };
 
 printData();
+
+// 5 - post
+const form = document.querySelector("#post-form")
+const titleInout = document.querySelector("#title")
+const bodyInput = document.querySelector("#body")
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  postsFetch.post("https://jsonplaceholder.typicode.com/posts", {
+    title: titleInout.ariaValueMax, body: bodyInput.ariaValueMax, userId: 1,
+  }) 
+})
